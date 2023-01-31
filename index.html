@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="btn">Add</button>
+    <div class="content">
+        <ul>
+            <li>Raymond     <span id="span">x</span></li>
+        </ul>
+    </div>
+    <script>
+        let text = document.querySelector("#text");
+        let btn = document.querySelector("#btn")
+        let list = document.querySelector(".content ul")
+        
+        btn.addEventListener('click', ()=>{
+            let newElement = document.createElement('li')
+            newElement.innerHTML = text.value
+            list.appendChild(newElement)
+        })
+
+        let newInput = document.createElement('input')
+        document.body.appendChild(newInput)
+        
+    </script>
+</body>
+</html>
